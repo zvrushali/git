@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
@@ -16,19 +17,46 @@ class User extends Authenticatable
     use HasApiTokens;
     use SoftDeletes;
      use Billable;
+=======
+
+namespace App;
+
+
+use Illuminate\Notifications\Notifiable;
+//use Laravel\Passport\HasApiTokens;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Spatie\Permission\Traits\HasRoles;
+use App\FileUpload;
+
+class User extends Authenticatable
+{
+    use  Notifiable;
+    use  HasRoles;
+
+
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+<<<<<<< HEAD
    protected $dates = ['deleted_at'];
    protected $fillable = ['first_name','last_name','email','password','gender','google_id'];
+=======
+    protected $table ='users';
+    protected $fillable = [
+        'name', 'email', 'password',
+    ];
+
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
 
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
+<<<<<<< HEAD
     protected $hidden = [
         'password', 'remember_token',];
 
@@ -69,3 +97,12 @@ class User extends Authenticatable
 
 
 
+=======
+   
+
+     public function fileuploads()
+    {
+      return $this->hasOnce(FileUpload::class);
+    }
+}
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739

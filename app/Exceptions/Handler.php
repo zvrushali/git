@@ -29,8 +29,11 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
+<<<<<<< HEAD
      * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
      *
+=======
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
      * @param  \Exception  $exception
      * @return void
      */
@@ -48,6 +51,14 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+<<<<<<< HEAD
         return parent::render($request, $exception);
+=======
+          if ($exception instanceof \Spatie\Permission\Exceptions\UnauthorizedException) {
+        return response()->json(['User have not permission for this page access.']);
+    }
+ 
+    return parent::render($request, $exception);
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
     }
 }

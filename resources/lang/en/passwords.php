@@ -13,7 +13,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'password' => 'Passwords must be at least six characters and match the confirmation.',
+=======
+    'password' => 'Passwords must be at least eight characters and match the confirmation.',
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
     'reset' => 'Your password has been reset!',
     'sent' => 'We have e-mailed your password reset link!',
     'token' => 'This password reset token is invalid.',

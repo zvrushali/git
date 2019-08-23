@@ -13,7 +13,11 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
+<<<<<<< HEAD
         Commands\UserCommand::class,
+=======
+        //
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
     ];
 
     /**
@@ -26,7 +30,10 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+<<<<<<< HEAD
         $schedule->command('custom:User')->daily();
+=======
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
     }
 
     /**

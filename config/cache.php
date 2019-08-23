@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Str;
+
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
 return [
 
     /*
@@ -11,7 +16,12 @@ return [
     | using this caching library. This connection is used when another is
     | not explicitly specified when executing a given caching function.
     |
+<<<<<<< HEAD
     | Supported: "apc", "array", "database", "file", "memcached", "redis"
+=======
+    | Supported: "apc", "array", "database", "file",
+    |            "memcached", "redis", "dynamodb"
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
     |
     */
 
@@ -57,7 +67,11 @@ return [
                 env('MEMCACHED_PASSWORD'),
             ],
             'options' => [
+<<<<<<< HEAD
                 // Memcached::OPT_CONNECT_TIMEOUT  => 2000,
+=======
+                // Memcached::OPT_CONNECT_TIMEOUT => 2000,
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
             ],
             'servers' => [
                 [
@@ -70,7 +84,19 @@ return [
 
         'redis' => [
             'driver' => 'redis',
+<<<<<<< HEAD
             'connection' => 'default',
+=======
+            'connection' => 'cache',
+        ],
+
+        'dynamodb' => [
+            'driver' => 'dynamodb',
+            'key' => env('AWS_ACCESS_KEY_ID'),
+            'secret' => env('AWS_SECRET_ACCESS_KEY'),
+            'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+            'table' => env('DYNAMODB_CACHE_TABLE', 'cache'),
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
         ],
 
     ],
@@ -86,9 +112,13 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'prefix' => env(
         'CACHE_PREFIX',
         str_slug(env('APP_NAME', 'laravel'), '_').'_cache'
     ),
+=======
+    'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache'),
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
 
 ];

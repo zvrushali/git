@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
+<<<<<<< HEAD
 Route::middleware('auth:api')->post('/hello', 'ApiAuthController@login');
 
 
@@ -26,4 +27,8 @@ Route::post('show','Api\ShowQuestionsController@showQuestion');
 Route::post('result','Api\ShowResultController@showResult');
 Route::get('logout','Api\ApiAuthController@logout');
 
+=======
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
 });

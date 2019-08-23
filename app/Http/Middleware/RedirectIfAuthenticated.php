@@ -17,6 +17,7 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
+<<<<<<< HEAD
 
         switch($guard)
         {  case 'admin':
@@ -36,6 +37,12 @@ class RedirectIfAuthenticated
           
         }
 //dd(Auth::guard($guard)->check());
+=======
+        if (Auth::guard($guard)->check()) {
+            return redirect('/home');
+        }
+
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
         return $next($request);
     }
 }

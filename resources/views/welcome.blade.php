@@ -1,22 +1,37 @@
 <!doctype html>
+<<<<<<< HEAD
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+=======
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
 
         <!-- Fonts -->
+<<<<<<< HEAD
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+=======
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
 
         <!-- Styles -->
         <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
+<<<<<<< HEAD
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
+=======
+                font-family: 'Nunito', sans-serif;
+                font-weight: 200;
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
                 height: 100vh;
                 margin: 0;
             }
@@ -52,7 +67,11 @@
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
+<<<<<<< HEAD
                 font-size: 12px;
+=======
+                font-size: 13px;
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -72,7 +91,14 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
+<<<<<<< HEAD
                         <a href="{{ route('register') }}">Register</a>
+=======
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
                     @endauth
                 </div>
             @endif
@@ -83,9 +109,17 @@
                 </div>
 
                 <div class="links">
+<<<<<<< HEAD
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
+=======
+                    <a href="https://laravel.com/docs">Docs</a>
+                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="https://laravel-news.com">News</a>
+                    <a href="https://blog.laravel.com">Blog</a>
+                    <a href="https://nova.laravel.com">Nova</a>
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>

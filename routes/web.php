@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+<<<<<<< HEAD
 /*
 Route::get('/', function () {
     return view('welcome');
@@ -73,3 +74,19 @@ Route::post('/subscription', 'SubscriptionController@create')->name('subscriptio
 Route::get('google', 'GoogleController@redirectToGoogle');
 Route::get('google/callback', 'GoogleController@handleGoogleCallback');
 Route::post('failed','SubscriptionController@faioledresponce');
+=======
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles','RoleController');
+    Route::resource('users','UserController');
+    Route::resource('products','ProductController');
+});
+Route::get('importExport', 'MaatwebsiteDemoController@importExport');
+Route::get('downloadExcel/{type}', 'MaatwebsiteDemoController@downloadExcel');
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739

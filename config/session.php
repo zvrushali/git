@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Str;
+
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
 return [
 
     /*
@@ -12,7 +17,11 @@ return [
     | you may specify any of the other wonderful drivers provided here.
     |
     | Supported: "file", "cookie", "database", "apc",
+<<<<<<< HEAD
     |            "memcached", "redis", "array"
+=======
+    |            "memcached", "redis", "dynamodb", "array"
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
     |
     */
 
@@ -70,7 +79,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'connection' => null,
+=======
+    'connection' => env('SESSION_CONNECTION', null),
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
 
     /*
     |--------------------------------------------------------------------------
@@ -90,6 +103,7 @@ return [
     | Session Cache Store
     |--------------------------------------------------------------------------
     |
+<<<<<<< HEAD
     | When using the "apc" or "memcached" session drivers, you may specify a
     | cache store that should be used for these sessions. This value must
     | correspond with one of the application's configured cache stores.
@@ -97,6 +111,15 @@ return [
     */
 
     'store' => null,
+=======
+    | When using the "apc", "memcached", or "dynamodb" session drivers you may
+    | list a cache store that should be used for these sessions. This value
+    | must match with one of the application's configured cache "stores".
+    |
+    */
+
+    'store' => env('SESSION_STORE', null),
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
 
     /*
     |--------------------------------------------------------------------------
@@ -124,7 +147,11 @@ return [
 
     'cookie' => env(
         'SESSION_COOKIE',
+<<<<<<< HEAD
         str_slug(env('APP_NAME', 'laravel'), '_').'_session'
+=======
+        Str::slug(env('APP_NAME', 'laravel'), '_').'_session'
+>>>>>>> d1cb5ffb453ba83f73b8ec0964c6d505c698d739
     ),
 
     /*
